@@ -1,0 +1,2 @@
+Django==3.0.8
+django-solo==1.1.5

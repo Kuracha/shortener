@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <form action="" method="POST" id="shortenerForm">
+      {% csrf_token %}
+      {{ form.as_p }}
+    <button type="submit"
+                    class="">Shorten</button>
+  </form>
+  {% endblock %}
