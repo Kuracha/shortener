@@ -34,5 +34,5 @@ class ShortUrlRedirectView(RedirectView):
         try:
             long_url = ShortenedUrl.objects.get(short_url=short_url).long_url
         except ShortenedUrl.DoesNotExist:
-            return None
+            return reverse_lazy('wrong_url')
         return long_url
