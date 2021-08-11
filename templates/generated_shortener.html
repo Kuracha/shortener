@@ -1,14 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <form action="" method="POST" id="shortenerForm">
+  <div class="row h-100">
+    <form action="" method="POST" id="shortenerForm" class="col-12 text-center my-auto">
       {% csrf_token %}
-      {{ form.as_p }}
-    <button type="submit"
-                    class="">Shorten</button>
-  </form>
-
-  <div id="generatedUrl">
-   <a href="{{ short_url }}">{{ short_url }}</a>
+      <div class="form-group card card-block bg-light">
+        <div class="card-body gray-background">
+          <small id="emailHelp" class="form-text text-muted">{{ form.long_url }}</small>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-lg btn-secondary mt-3">Shorten</button>
+    </form>
+    <div class="col-12 text-center mt-5">
+      <div class="card card-block bg-light">
+        <div class="card-header text-secondary">
+          <h3>Shortened url</h3>
+        </div>
+        <div class="card-body gray-background">
+          <a href="{{ short_url }}" class="text-white">{{ short_url }}</a>
+        </div>
+      </div>
+    </div>
   </div>
-  {% endblock %}
+{% endblock %}
