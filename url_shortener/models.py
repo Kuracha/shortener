@@ -4,7 +4,7 @@ from solo.models import SingletonModel
 
 
 class CustomSettings(SingletonModel):
-    short_url_length = models.PositiveIntegerField('Length of shortened url')
+    short_url_length = models.PositiveIntegerField('Length of shortened url', default=8)
 
     class Meta:
         verbose_name = 'Settings'

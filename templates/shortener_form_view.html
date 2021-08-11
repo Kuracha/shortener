@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <form action="" method="POST" id="shortenerForm">
+  <div class="row h-100">
+    <form action="" method="POST" id="shortenerForm" class="col-12 text-center my-auto">
       {% csrf_token %}
-      {{ form.as_p }}
-    <button type="submit"
-                    class="">Shorten</button>
-  </form>
-  {% endblock %}
+      <div class="form-group card card-block bg-light">
+        <div class="card-body gray-background">
+          <small id="emailHelp" class="form-text text-muted">{{ form.long_url }}</small>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-lg btn-secondary mt-3">Shorten</button>
+    </form>
+  </div>
+{% endblock %}

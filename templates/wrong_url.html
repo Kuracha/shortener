@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="row h-100">
+    <div class="col-12 text-center my-auto">
+      <div class="card card-block bg-light">
+        <div class="card-header text-secondary">
+          <h3>Provided url is invalid, please generate new url</h3>
+        </div>
+        <div class="card-body gray-background ">
+          <a href="{% url 'shortener' %}" class="btn btn-secondary">Go to Shortener</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
