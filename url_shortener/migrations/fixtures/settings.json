@@ -1,0 +1,7 @@
+[
+  {
+    "model": "url_shortener.customSettings",
+    "pk": 1,
+    "fields": {}
+  }
+]
