@@ -10,6 +10,10 @@ class ShortenedUrlAdmin(admin.ModelAdmin):
         'long_url',
         'short_url',
     ]
+    list_display = [
+        'long_url',
+        'short_url',
+    ]
 
 
 @admin.register(CustomSettings)
